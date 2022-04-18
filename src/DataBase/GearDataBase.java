@@ -37,12 +37,12 @@ class HeadGear implements Gear{
 public class GearDataBase {
 	public static void main(String []args) {
 
-		HeadGear headGear = new HeadGear();
+		// HeadGear headGear = new HeadGear();
 		
 		HeadGear letherHat = new HeadGear("가죽 모자", "흔히 보는 가죽모자다. 약간의 방어력과 함께 차양 기능을 제공한다.", 1, 10, 0 );
 		HeadGear militaryHat = new HeadGear("군용 모자", "군대에서 보급되는 모자. 높은 내구성과 탁월한 위장 능력을 자랑한다.", 1, 20, 0 );
 		
-		System.out.println(headGear);
+		// System.out.println(headGear);
 		
 	// 문서의 끝
 	}
