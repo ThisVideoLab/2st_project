@@ -13,8 +13,6 @@ interface BottomButton {
 }
 
 class FrameBottomButtonArray{
-
-	ArrayList<Account> accountlist = new ArrayList<Account>();
 	
 }
 
@@ -34,14 +32,29 @@ public class frame {
         frm_deflault.getContentPane().setLayout(null); //레이아웃 설정 (안에 fLay) 넣으면 적용 됨
         frm_deflault.setResizable(false); // 창크기 조절 (false) => 조절 불가능
         
-        // 버튼 추가 및 설정
-        JButton btnLoca = new JButton("LOCATION"); // JButton 타입의 객체 생성 + "버튼이름" 
-        frm_deflault.getContentPane().add(btnLoca);       // 프레임에 버튼을 추가해줌 -> 실체화
-        btnLoca.setBounds(0, 750, 240, 50); //  (margin-left,margin-top,width,height)
+        // 버튼 객체 생성 -  JButton 타입의 객체 생성 + "버튼이름"
+        JButton btnLoca = new JButton("LOCATION");
+        JButton btnChar = new JButton("STATUS");
+        JButton btnReci = new JButton("RECIPE");
+        JButton btnInven = new JButton("INVENTORY");
+        JButton btnEsc = new JButton("EXIT");
+        
+        // 버튼 추가 - 프레임에 버튼을 추가해줌 -> 실체화
+        frm_deflault.getContentPane().add(btnLoca);       
+        frm_deflault.getContentPane().add(btnChar);
+        frm_deflault.getContentPane().add(btnReci);
+        frm_deflault.getContentPane().add(btnInven);
+        frm_deflault.getContentPane().add(btnEsc);
+        
+        // 버튼별 크기 지정 - (margin-left,margin-top,width,height)
+        btnLoca.setBounds(0, 750, 240, 50); 
+        btnChar.setBounds(240, 750, 240, 50);
+        btnReci.setBounds(480, 750, 240, 50);
+        btnInven.setBounds(720, 750, 240, 50);
+        btnEsc.setBounds(960, 750, 240, 50);
+        
         
         btnLoca.addActionListener(event -> {
-        	
-        	
         	JLabel imgLblLoca = new JLabel(); // 이미지용 라벨 생성
         	frm_deflault.getContentPane().add(imgLblLoca);
         	ImageIcon bsImgLoca = new ImageIcon("src/survive/img/home.png"); // 라벨에 넣을 이미지 객체 생성
@@ -51,12 +64,7 @@ public class frame {
         	frm_deflault.getContentPane().add(imgLblLoca); // 프레임에 삽입
         });
         
-        JButton btnChar = new JButton("STATUS");
-        frm_deflault.getContentPane().add(btnChar);
-        btnChar.setBounds(240, 750, 240, 50);
-        
         btnChar.addActionListener(event -> {
-        	
         	JLabel imgLblChar = new JLabel(); // 이미지용 라벨 생성
         	frm_deflault.getContentPane().add(imgLblChar);
         	ImageIcon bsImgChar = new ImageIcon("src/survive/img/charactor.png"); // 라벨에 넣을 이미지 객체 생성
@@ -64,15 +72,9 @@ public class frame {
         	imgLblChar.setBounds(0, 0, 1200,750); // 크기 지정
         	imgLblChar.setHorizontalAlignment(JLabel.CENTER);
         	frm_deflault.getContentPane().add(imgLblChar); // 프레임에 삽입
-        	
         });
         
-        JButton btnReci = new JButton("RECIPE");
-        frm_deflault.getContentPane().add(btnReci);
-        btnReci.setBounds(480, 750, 240, 50);
-        
         btnReci.addActionListener(event -> {
-
         	JLabel imgLblReci = new JLabel(); // 이미지용 라벨 생성
         	frm_deflault.getContentPane().add(imgLblReci);
         	ImageIcon bsImgReci = new ImageIcon("src/survive/img/charactor.png"); // 라벨에 넣을 이미지 객체 생성
@@ -80,20 +82,11 @@ public class frame {
         	imgLblReci.setBounds(0, 0, 1200,750); // 크기 지정
         	imgLblReci.setHorizontalAlignment(JLabel.CENTER);
         	frm_deflault.getContentPane().add(imgLblReci); // 프레임에 삽입
-        	
         });
-        
-        JButton btnInven = new JButton("INVENTORY");
-        frm_deflault.getContentPane().add(btnInven);
-        btnInven.setBounds(720, 750, 240, 50);
         
         btnInven.addActionListener(event -> {
         	// 버튼 클릭시에 일어나는 이벤트를 설정
         });
-        
-        JButton btnEsc = new JButton("EXIT");
-        frm_deflault.getContentPane().add(btnEsc);
-        btnEsc.setBounds(960, 750, 240, 50);
         
         btnEsc.addActionListener(event -> {
         	// 버튼 클릭시에 일어나는 이벤트를 설정
