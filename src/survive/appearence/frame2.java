@@ -44,7 +44,6 @@ class frame_whole{
 		// Jframe 위에 컨테이너를 올려줌
 		Container con_bottom = frm_deflault.getContentPane();
 		con_bottom.setLayout(gl_bottom);
-		con_bottom.setSize(1216, 839);
 		
         // 버튼 그룹에 버튼을 추가  // Jframe 내의 컨테이너에 버튼 추가(실체화) - 선풍기 토글을 위한 작업
 		bg_bottom.add(btnLoca); con_bottom.add(btnLoca);

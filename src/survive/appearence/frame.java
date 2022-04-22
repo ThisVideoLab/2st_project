@@ -26,7 +26,6 @@ JFrame frm_deflault = new JFrame("Last Man Standing");
 		frm_deflault.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // 프레임을 닫았을 때 메모리에서 제거되도록 설정
         frm_deflault.setVisible(true); // 프레임이 보이도록 설정
         // System.out.println(frm_deflault.getContentPane().getSize()); // 프레임 내부 크기를 콘솔 창에 출력함
-       
         FlowLayout fLay_bottom = new FlowLayout(); // 레이아웃 생성
         FlowLayout fLay_main = new FlowLayout();
         frm_deflault.getContentPane().setLayout(fLay_main); //레이아웃 설정 (안에 fLay) 넣으면 적용 됨
